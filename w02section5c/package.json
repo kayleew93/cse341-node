@@ -1,0 +1,17 @@
+{
+  "name": "w02section5c",
+  "version": "1.0.0",
+  "description": "section 5 assignment - navigation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon Express.js"
+  },
+  "author": "Kaylee Murray",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  }
+}
