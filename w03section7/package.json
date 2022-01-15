@@ -1,0 +1,23 @@
+{
+  "name": "section07",
+  "version": "1.0.0",
+  "description": "Section 07",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "start-server": "node app.js"
+  },
+  "author": "Kaylee Murray",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "express-handlebars": "3.0",
+    "pug": "^3.0.2"
+  }
+}
