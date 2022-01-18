@@ -88,8 +88,9 @@ main {
 }
 
 .card__actions button,
+form button,
 .card__actions a {
-    margin: 0 0.25rem;
+    margin: 0.25rem;
 }
 
 .btn {
@@ -99,6 +100,7 @@ main {
   background: white;
   border-radius: 3px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .btn:hover,
