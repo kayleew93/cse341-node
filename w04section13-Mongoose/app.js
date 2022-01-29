@@ -1,5 +1,14 @@
 const path = require('path');
 const PORT = process.env.PORT || 5000;
+const cors = require('cors');
+
+// For uploading to heroku
+const corsOptions = {
+  origin: "https://cse341-week4.herokuapp.com/",
+  optionsSuccessStatus: 200
+};
+const MONGODB_URL = process.env.MONGODB_URL || "mongodb+srv://kayleem:ZKdxkk9we3TKBWN@cluster0.b7bze.mongodb.net/shop?retryWrites=true&w=majority";
+                      
 
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -15,6 +24,11 @@ app.set('views', 'views');
 
 const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
+
+app.use(cors(corsOptions));
+const options = {
+  family: 4
+};
 
 app.use(bodyParser.urlencoded({
   extended: false
@@ -35,7 +49,7 @@ app.use(shopRoutes);
  
 app.use(errorController.get404);
 
-mongoose.connect('mongodb+srv://kayleem:ZKdxkk9we3TKBWN@cluster0.b7bze.mongodb.net/shop?retryWrites=true&w=majority')
+mongoose.connect(MONGODB_URL, options)
 .then(result => {
   User.findOne().then(user => {
     if (!user) {
