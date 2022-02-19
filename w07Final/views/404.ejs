@@ -1,0 +1,15 @@
+<%- include('includes/head.ejs') %>
+</head>
+
+<body>
+    <%- include('includes/navigation.ejs') %>
+    <div class="centered">
+    <h1>Error: Page Not Found!</h1>
+    <div class="image">
+        <img src="https://images.unsplash.com/photo-1603792907191-89e55f70099a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+            alt="Error Image">
+    </div>
+    <p>Sorry, we couldn't find "<%= badurl %>"</p>
+    <p>Try searching the <a class="a__link" href='/'>home page</a></p>
+</div>
+    <%- include('includes/end.ejs') %>

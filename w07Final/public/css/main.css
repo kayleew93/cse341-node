@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Meddon&family=Sacramento&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Dosis', sans-serif;
+  background-color: #fff7eb;
+}
+
+main {
+  padding: 1rem;
+  margin: auto;
+}
+
+form {
+  display: inline;
+}
+
+.centered {
+  text-align: center;
+}
+
+h1.product__title {
+  font-size: 1.5rem;
+}
+
+.h1__main {
+  font-family: 'Meddon', cursive;
+  font-size: 5rem;
+  color: #5B3343;
+}
+
+.image {
+  height: 20rem;
+}
+
+.image img {
+  height: 100%;
+}
+
+.img__main {
+  width: 40rem;
+}
+
+.main-header {
+  width: 100%;
+  height: 4rem;
+  background-color: #305F53;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.main-header__nav {
+  height: 100%;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-header__item-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.main-header__item, .p__main {
+  margin: 0 1rem;
+  padding: 0;
+}
+
+.a__link, .a__link:visited {
+  color: #5B3343;
+}
+
+.main-header__item a,
+.main-header__item button {
+  font: inherit;
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.main-header__item a:hover,
+.main-header__item a:active,
+.main-header__item a.active,
+.main-header__item button:hover,
+.main-header__item button:active {
+  border: 1px solid white;
+}
+
+.mobile-nav {
+  width: 30rem;
+  height: 100vh;
+  max-width: 90%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #FFFDFA;
+  z-index: 10;
+  padding: 2rem 1rem 1rem 2rem;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
+}
+
+.mobile-nav.open {
+  transform: translateX(0);
+}
+
+.mobile-nav__item-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-nav__item {
+  margin: 1rem;
+  padding: 0;
+}
+
+.mobile-nav__item a,
+.mobile-nav__item button {
+  font: inherit;
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  padding: 0.5rem 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-nav__item a:active,
+.mobile-nav__item a:hover,
+.mobile-nav__item a.active,
+.mobile-nav__item button:hover,
+.mobile-nav__item button:active {
+  background: #305F53;
+  color: white;
+  border-radius: 3px;
+}
+
+#side-menu-toggle {
+  border: 1px solid #5B3343;
+  font: inherit;
+  padding: 0.5rem;
+  display: block;
+  background: transparent;
+  color: #5B3343;
+  cursor: pointer;
+}
+
+#side-menu-toggle:focus {
+  outline: none;
+}
+
+#side-menu-toggle:active,
+#side-menu-toggle:hover {
+  color: #5B3343;
+  border-color: #5B3343;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  display: none;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  background-color: white;
+  border-radius: 20px;
+}
+
+.card__header {
+  background-color: #5B3343;
+  color: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card__header,
+.card__content {
+  padding: 1rem;
+}
+
+.card__header h1,
+.card__content h1,
+.card__content h2,
+.card__content p {
+  margin: 0;
+}
+
+.card__image {
+  width: 100%;
+}
+
+.card__image img {
+  width: 100%;
+}
+
+.card__actions {
+  padding: 1rem;
+  text-align: center;
+}
+
+.card__actions button,
+.card__actions a {
+  margin: 0 0.25rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  text-decoration: none;
+  font: inherit;
+  border: none;
+  color: black;
+  background: #F2D388;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn-boring {
+  background-color: white;
+  border: 2px solid #F2D388;
+  padding: 0rem .5rem;
+}
+
+.btn-stock {
+  color: #305F53;
+  pointer-events: none;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #305F53;
+  color: white;
+}
+
+.btn.danger {
+  color: white;
+  background-color: #305F53;
+}
+
+.btn.danger:hover,
+.btn.danger:active {
+  background: #5B3343;
+  color: white;
+}
+
+.user-message {
+  margin: auto;
+  width: 90%;
+  padding: 0.5rem;
+  border-radius: 3px;
+  background: #F2D388;
+  text-align: center;
+}
+
+.user-message--error {
+  background: #C98474;
+  color: black;
+}
+
+@media (min-width: 768px) {
+  .main-header__nav {
+    display: flex;
+  }
+
+  #side-menu-toggle {
+    display: none;
+  }
+
+  .user-message {
+    width: 25rem;
+  }
+}
+
+.detail__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.detail__right {
+  grid-column: 2/3;
+}
