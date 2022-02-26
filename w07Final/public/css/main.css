@@ -305,6 +305,10 @@ h1.product__title {
   grid-gap: 10px;
 }
 
+.detail__left {
+  margin: 0 0 0 auto;
+}
+
 .detail__right {
   grid-column: 2/3;
 }
