@@ -1,1 +1,2 @@
+// GET method to display professional information
 GET http://localhost:8080/professional
